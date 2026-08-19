@@ -3,348 +3,508 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>血色庄园 · 双人剧本杀</title>
+<title>血色庄园 · 完整加长版</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Microsoft Yahei',sans-serif;}
-body{background:#1a0a0a;color:#d0c0c0;padding:20px;}
-.container{max-width:800px;margin:0 auto;background:rgba(30,15,15,0.9);border-radius:24px;padding:30px;border:1px solid #5a2a2a;}
-h1{text-align:center;color:#d4a0a0;border-bottom:2px solid #5a2a2a;padding-bottom:18px;margin-bottom:20px;font-size:28px;}
-h1 small{display:block;font-size:14px;color:#9a7a7a;margin-top:6px;}
-h2{color:#d4b0b0;margin:20px 0 10px;border-left:4px solid #8a4a4a;padding-left:14px;}
-.box{background:rgba(20,10,10,0.6);border-radius:16px;padding:16px 20px;margin:12px 0;border:1px solid #3a1a1a;}
-.box p{margin:6px 0;line-height:1.8;}
+body{background:#0a080e;color:#c8c0d0;padding:12px;}
+.container{max-width:800px;margin:0 auto;background:rgba(14,10,20,0.95);border-radius:16px;padding:18px;border:2px solid #3a2a4a;}
+h1{text-align:center;color:#d4a0c8;border-bottom:2px solid #3a1a3a;padding-bottom:10px;margin-bottom:10px;font-size:22px;letter-spacing:4px;}
+h1 small{display:block;font-size:10px;color:#8a6a8a;margin-top:3px;}
+h2{color:#d4a0c8;margin:8px 0 4px;border-left:4px solid #8a4a7a;padding-left:10px;font-size:15px;}
+.box{background:rgba(20,14,24,0.7);border-radius:10px;padding:8px 10px;margin:4px 0;border:1px solid #2a1a2a;}
+.box p{margin:2px 0;line-height:1.6;font-size:12px;color:#c8b8d0;}
 .hide{display:none !important;}
-.btn{display:block;width:100%;padding:14px 0;margin:8px 0;border:none;border-radius:30px;background:#3a1a1a;color:#e8d0d0;font-size:16px;cursor:pointer;border:1px solid #5a3a3a;}
-.btn:hover:not(:disabled){background:#5a2a2a;}
-.btn:disabled{opacity:0.4;cursor:not-allowed;}
-.btn-gold{background:#6a3a2a;border-color:#8a5a3a;}
-.red{color:#f0a0a0;}
-.green{color:#a0d0a0;}
-.gold{color:#d4b080;}
-.cyan{color:#80c0d0;}
-.tip{color:#b09090;font-size:14px;background:#1a0e0e;padding:4px 14px;border-radius:20px;display:inline-block;border:1px solid #4a2a2a;}
-.badge-group{display:flex;flex-wrap:wrap;gap:8px 16px;justify-content:center;margin:6px 0;}
-.badge{background:#2a1a1a;padding:4px 16px;border-radius:20px;font-size:13px;border:1px solid #5a3a3a;color:#c0a0a0;}
-.secret-script{background:#0a0505;border-left:4px solid #8a4a4a;padding:16px 20px;margin:12px 0;border-radius:16px;border:1px solid #3a1a1a;max-height:500px;overflow-y:auto;}
-.secret-script h3{color:#d4b0b0;border-bottom:1px dashed #5a2a2a;padding-bottom:6px;margin-bottom:10px;}
-.secret-script p{color:#c0b0b0;line-height:1.7;margin:4px 0;}
-.timeline-block{background:#1a0e0e;padding:10px 14px;border-radius:16px;margin:8px 0;font-size:14px;border-left:3px solid #6a3a3a;color:#c0b0b0;}
-.role-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+.btn{display:block;width:100%;padding:8px 0;margin:3px 0;border:none;border-radius:30px;background:#1a1a2a;color:#d0c8e0;font-size:13px;cursor:pointer;border:1px solid #2a2a4a;}
+.btn:hover:not(:disabled){background:#2a2a4a;}
+.btn:disabled{opacity:0.2;cursor:not-allowed;}
+.btn-gold{background:#2a1a2a;border-color:#4a2a4a;color:#e0c8e0;}
+.btn-gold:hover:not(:disabled){background:#3a2a4a;}
+.btn-sm{padding:3px 12px;width:auto;display:inline-block;margin:2px 0;font-size:11px;}
+.btn-vote{padding:6px 0;margin:2px 0;font-size:12px;background:#1a1a2a;border-color:#2a2a3a;}
+.btn-vote:hover:not(:disabled){background:#2a2a4a;}
+.btn-vote.selected{background:#3a2a4a;border-color:#6a3a6a;}
+.btn-vote:disabled{opacity:0.15;}
+.red{color:#e8a0a0;}.green{color:#90d0a0;}.gold{color:#d4b080;}.cyan{color:#70c0e0;}.pink{color:#e8a0c8;}.purple{color:#c090d0;}
+.tip{color:#8a7a9a;font-size:10px;background:#0a0a12;padding:2px 8px;border-radius:20px;display:inline-block;border:1px solid #1a1a2a;}
+.badge-group{display:flex;flex-wrap:wrap;gap:3px 6px;justify-content:center;margin:2px 0;}
+.badge{background:#0a0a12;padding:2px 8px;border-radius:20px;font-size:9px;border:1px solid #2a2a3a;color:#8a7a9a;}
+.secret-script{background:#0a0a12;border-left:4px solid #8a4a7a;padding:8px 10px;margin:4px 0;border-radius:10px;border:1px solid #1a1a2a;max-height:350px;overflow-y:auto;}
+.secret-script h3{color:#d4a0c8;border-bottom:1px dashed #2a1a2a;padding-bottom:3px;margin-bottom:3px;font-size:13px;}
+.secret-script p{color:#b8a8c0;line-height:1.5;margin:2px 0;font-size:11px;}
+.secret-script strong{color:#e0c8e0;}
+.timeline-block{background:#0a0a12;padding:3px 8px;border-radius:8px;margin:2px 0;font-size:10px;border-left:3px solid #5a2a5a;color:#8a7a9a;}
+.role-grid{display:grid;grid-template-columns:1fr 1fr;gap:4px;}
 @media(max-width:600px){.role-grid{grid-template-columns:1fr;}}
-.chat-card{background:#1a0e0e;border-radius:16px;padding:14px 18px;margin:10px 0;border-left:4px solid #8a4a4a;}
-.chat-card .name{color:#d4a0a0;font-weight:bold;}
-.chat-card .content{color:#c0b0b0;margin-top:4px;font-size:14px;}
-.chat-card .timeline-mini{background:#0a0505;padding:6px 12px;border-radius:10px;margin-top:6px;font-size:13px;border-left:3px solid #6a3a3a;color:#b0a0a0;}
-.question-area{background:#0a0505;border-radius:16px;padding:16px;margin-top:10px;border:1px solid #3a1a1a;}
-.question-area input,.question-area select{padding:10px 14px;border-radius:30px;border:1px solid #4a2a2a;background:#1a0a0a;color:#e8d0d0;font-size:14px;outline:none;}
-.question-area input::placeholder{color:#6a4a4a;}
-.flex-row{display:flex;gap:10px;flex-wrap:wrap;align-items:center;}
-.flex-row select{flex:0 0 140px;}
-.flex-row input{flex:1;min-width:120px;}
-.btn-sm{padding:8px 20px;width:auto;display:inline-block;margin:4px 0;}
-.response-box{background:#0a0505;border-radius:12px;padding:10px 14px;margin-top:8px;border-left:3px solid #8a4a4a;color:#c0b0b0;font-size:14px;min-height:36px;}
-.footer-note{margin-top:24px;text-align:center;color:#6a4a4a;font-size:13px;border-top:1px solid #2a1a1a;padding-top:14px;}
-.warning-box{background:#2a1010;border-left:4px solid #8a3a3a;padding:10px 16px;border-radius:12px;margin:8px 0;}
-.warning-box strong{color:#f0a0a0;}
+.chat-card{background:#0a0a12;border-radius:10px;padding:6px 10px;margin:3px 0;border-left:4px solid #6a3a6a;}
+.chat-card .name{color:#d4a0c8;font-weight:bold;font-size:12px;}
+.chat-card .content{color:#a8a0b8;margin-top:2px;font-size:11px;}
+.chat-card .timeline-mini{background:#06060a;padding:3px 6px;border-radius:6px;margin-top:2px;font-size:9px;border-left:3px solid #3a2a3a;color:#7a6a8a;}
+.question-area{background:#0a0a12;border-radius:10px;padding:8px 10px;margin-top:4px;border:1px solid #1a1a2a;}
+.question-area input,.question-area select{padding:4px 8px;border-radius:30px;border:1px solid #1a1a2a;background:#0e0e1a;color:#d0c8e0;font-size:11px;outline:none;}
+.question-area input::placeholder{color:#4a3a5a;}
+.flex-row{display:flex;gap:4px;flex-wrap:wrap;align-items:center;}
+.flex-row select{flex:0 0 90px;}
+.flex-row input{flex:1;min-width:60px;}
+.response-box{background:#06060a;border-radius:8px;padding:4px 8px;margin-top:3px;border-left:3px solid #6a3a6a;color:#b8a8c0;font-size:11px;min-height:24px;}
+.footer-note{margin-top:12px;text-align:center;color:#4a3a5a;font-size:9px;border-top:1px solid #0a0a12;padding-top:8px;}
+.poem{font-style:italic;color:#7a6a8a;text-align:center;padding:2px 0;border-top:1px dashed #1a1a2a;border-bottom:1px dashed #1a1a2a;margin:3px 0;font-size:11px;}
+.quick-btns{display:flex;flex-wrap:wrap;gap:2px;margin-top:3px;}
+.quick-btns button{padding:2px 8px;font-size:9px;background:#0e0e1a;border:1px solid #1a1a2a;border-radius:30px;color:#7a6a8a;cursor:pointer;}
+.quick-btns button:hover{background:#1a1a2a;}
+.vote-status{text-align:center;padding:4px;background:#0a0a12;border-radius:8px;margin:3px 0;font-size:11px;}
+.vote-status .voter{color:#d4a0c8;}
+.share-card{background:#0a0a12;border-radius:10px;padding:6px 10px;margin:3px 0;border-left:3px solid #5a3a5a;}
+.share-card .sname{color:#c090b0;font-weight:bold;font-size:11px;}
+.share-card .sstory{color:#a898a8;font-size:10px;margin-top:2px;line-height:1.4;font-style:italic;}
+.share-card .sline{color:#6a5a6a;font-size:9px;margin-top:2px;border-top:1px dashed #1a1a2a;padding-top:2px;}
+.progress-bar{height:4px;background:#1a1a2a;border-radius:4px;margin:6px 0;overflow:hidden;}
+.progress-bar .fill{height:100%;background:#8a4a7a;width:0%;transition:width 0.5s;}
+@media(max-width:500px){.container{padding:10px;}}
 </style>
 </head>
 <body>
 <div class="container" id="app">
-<h1>🩸 血色·庄园 <small>双人剧本杀 · 硬核推理版</small></h1>
+<h1>🩸 血色·庄园 <small>完整加长版</small></h1>
+<div class="progress-bar"><div class="fill" id="progress"></div></div>
 
-<!-- STEP0 -->
-<div id="step0">
+<div id="s0">
 <div class="box" style="text-align:center;">
-<div class="badge-group">
-<span class="badge">👥 2人</span>
-<span class="badge">⏳ 60-90min</span>
-<span class="badge">🎭 四角色</span>
-<span class="badge">🔪 双重谋杀</span>
+<div class="badge-group"><span class="badge">2人</span><span class="badge">120-150分钟</span></div>
+<div class="poem">庄园里的每个人，都在说谎。</div>
+<p style="font-size:12px;">1930年，血色庄园。富商亨利·布莱克死于书房。<br>死因：<span class="red">毒酒 + 白绫</span>。<br>双重致死，凶手不止一人。</p>
+<p class="tip">角色互斥 · 禁止窥屏 · 古风硬核</p>
 </div>
-<p style="margin-top:14px;font-size:16px;">1930年，雾锁庄园。富商<strong>亨利·布莱克</strong>在书房中被谋杀。<br>死因：<span class="red">中毒 + 头部重击</span><br><span class="red">双重致死，凶手不止一人！</span></p>
-<div class="warning-box"><strong>⚠️ 难度：</strong> 多重身份、隐藏关系、真假线索</div>
-<p class="tip" style="margin-top:10px;">📌 角色互斥 · 禁止窥屏 · 可盘问人机</p>
-</div>
-<button class="btn" onclick="nextStep()">🩸 踏入庄园</button>
+<button class="btn" onclick="go(1)">踏入庄园</button>
 </div>
 
-<!-- STEP1 -->
-<div id="step1" class="hide">
-<h2>📜 故事背景</h2>
+<div id="s1" class="hide">
+<h2>故事背景</h2>
 <div class="box">
-<p>1930年冬，布莱克庄园被浓雾笼罩。富商亨利·布莱克被发现死在书房中——</p>
-<p style="margin-top:6px;"><span class="red">中毒 + 头部钝器重击</span>，两种致命伤几乎同时发生。</p>
-<p style="margin-top:10px;"><strong>四名嫌疑人：</strong></p>
-<p><strong style="color:#d4a0a0;">🎩 管家·托马斯</strong> — 灭门案唯一幸存者</p>
-<p><strong style="color:#d4a0a0;">👗 夫人·伊莎贝拉</strong> — 庄园真正继承人</p>
-<p><strong style="color:#d4a0a0;">🩺 医生·维克多</strong> — 被死者敲诈多年</p>
-<p><strong style="color:#d4a0a0;">📝 记者·艾米莉</strong> — 死者私生女</p>
+<p>🎩 管家·托马斯 — 20年前灭门案唯一幸存者，潜伏庄园多年</p>
+<p>👗 夫人·伊莎贝拉 — 庄园真正继承人，与死者是假结婚</p>
+<p>🩺 医生·维克多 — 地下毒品贩子，被死者敲诈多年</p>
+<p>📝 记者·艾米莉 — 死者私生女，为生母复仇而来</p>
+<p style="margin-top:4px;font-size:11px;color:#6a5a6a;">每个人都有杀人的理由，每个人都在说谎。</p>
+<p style="font-size:11px;color:#6a5a6a;">但真正的凶手，可能不止一个。</p>
 </div>
-<button class="btn" onclick="nextStep()">📖 选择角色</button>
+<button class="btn" onclick="go(2)">选择角色</button>
 </div>
 
-<!-- STEP2 -->
-<div id="step2" class="hide">
-<h2>🎭 选择角色</h2>
-<div class="box" style="text-align:center;">
-<span style="color:#b09090;">玩家1选一个 · 玩家2选另一个</span>
-</div>
-<p class="tip">⚠️ 点击查看剧本，<span class="red">其他按钮禁用</span></p>
+<div id="s2" class="hide">
+<h2>选择角色</h2>
+<div class="box" style="text-align:center;font-size:11px;color:#8a7a9a;">玩家1选一个 · 玩家2选另一个</div>
 <div class="role-grid">
-<button id="btnThomas" class="btn" onclick="toggleThomas()">🎩 管家·托马斯</button>
-<div id="thomasScript" class="hide secret-script">
-<h3>🔒 管家·托马斯 · 绝密剧本</h3>
-<p><strong>人设</strong>：50岁，在庄园15年，表面忠诚，实则复仇。</p>
-<p><strong>秘密</strong>：你是"红磨坊家族灭门案"唯一幸存者，亨利为夺庄园灭你满门。</p>
-<div class="timeline-block"><strong>时间线</strong><br>19:30 送威士忌，下慢性毒药（剂量不足致命）<br>20:00 看到伊莎贝拉慌张出来<br>20:15 听到书房争吵<br>20:30 看到艾米莉徘徊<br>20:45 发现亨利已死</div>
-<p><strong>任务</strong>：隐藏灭门案身份 · 找出真凶。</p>
+<button id="bThomas" class="btn" onclick="pick('Thomas')">🎩 管家·托马斯</button>
+<div id="sThomas" class="hide secret-script">
+<h3>管家·托马斯 · 绝密剧本</h3>
+<p><strong>人设</strong>：50岁，在布莱克庄园服务15年，表面忠诚谦卑。</p>
+<p><strong>秘密</strong>：你是20年前"红磨坊家族灭门案"唯一幸存者。你的真实姓氏是<span class="gold">德·拉·克鲁瓦</span>。亨利当年为了夺取你家族的庄园，收买杀手灭门。你改名换姓潜伏15年，就是为了亲手复仇。你在他酒里下了慢性毒药，但剂量不足以致命——你只想让他痛苦。</p>
+<div class="timeline-block"><strong>时间线</strong><br>19:30 送威士忌，下了慢性毒药<br>20:00 看到伊莎贝拉慌张从书房出来<br>20:15 听到书房传来争吵声（维克多）<br>20:30 看到艾米莉在走廊徘徊<br>20:45 再次进入书房，发现亨利已死<br>21:00 通知所有人并报警</div>
+<p><strong>任务</strong>：隐藏灭门案身份 · 承认下毒但强调剂量不足 · 找出真凶</p>
 </div>
 
-<button id="btnIsabella" class="btn" onclick="toggleIsabella()">👗 夫人·伊莎贝拉</button>
-<div id="isabellaScript" class="hide secret-script">
-<h3>🔒 夫人·伊莎贝拉 · 绝密剧本</h3>
-<p><strong>人设</strong>：35岁，亨利遗孀，实则庄园真正继承人。</p>
-<p><strong>秘密</strong>：你与亨利是假结婚。你母亲是第一任妻子，被亨利逼死。</p>
-<div class="timeline-block"><strong>时间线</strong><br>19:45 书房争吵，亨利威胁揭穿你<br>20:00 遇到托马斯<br>20:20 回房发现东西被动<br>20:40 听到重物倒地声<br>21:00 托马斯破门</div>
-<p><strong>任务</strong>：隐藏真实身份 · 找出真凶。</p>
+<button id="bIsabella" class="btn" onclick="pick('Isabella')">👗 夫人·伊莎贝拉</button>
+<div id="sIsabella" class="hide secret-script">
+<h3>夫人·伊莎贝拉 · 绝密剧本</h3>
+<p><strong>人设</strong>：35岁，表面是亨利的遗孀，实则庄园真正继承人。</p>
+<p><strong>秘密</strong>：你与亨利是<span class="gold">假结婚</span>。你的母亲是亨利的第一任妻子，被亨利逼死。你以"续弦"身份潜伏回来，是为了夺回母亲的一切。你拿走了书房里一份重要的遗嘱——那份遗嘱会揭穿你的身份。</p>
+<div class="timeline-block"><strong>时间线</strong><br>19:45 与亨利争吵，他发现了你的真实身份<br>20:00 愤怒离开，遇到托马斯<br>20:20 回房发现东西被翻过<br>20:40 听到重物倒地声<br>20:50 下楼看到艾米莉匆忙离开<br>21:00 托马斯破门</div>
+<p><strong>任务</strong>：隐藏真实身份 · 找出真凶</p>
 </div>
 
-<button id="btnVictor" class="btn" onclick="toggleVictor()">🩺 医生·维克多</button>
-<div id="victorScript" class="hide secret-script">
-<h3>🔒 医生·维克多 · 绝密剧本</h3>
-<p><strong>人设</strong>：45岁，亨利私人医生，实际是毒品贩子。</p>
-<p><strong>秘密</strong>：被亨利敲诈7年，在威士忌里下过吗啡。</p>
-<div class="timeline-block"><strong>时间线</strong><br>19:30 准备药物，托马斯来借镇定剂<br>20:10 被亨利召见<br>20:20 争吵离开<br>20:50 听到巨响<br>21:00 检查尸体</div>
-<p><strong>任务</strong>：隐藏毒品生意 · 找出真凶。</p>
+<button id="bVictor" class="btn" onclick="pick('Victor')">🩺 医生·维克多</button>
+<div id="sVictor" class="hide secret-script">
+<h3>医生·维克多 · 绝密剧本</h3>
+<p><strong>人设</strong>：45岁，亨利私人医生，实际是地下毒品贩子。</p>
+<p><strong>秘密</strong>：被亨利<span class="gold">敲诈了7年</span>。他发现了你的毒品生意，以举报威胁你。你在他的酒里下了吗啡，但剂量控制得很精准——你只是想让他"平静"一点，从未想杀死他。</p>
+<div class="timeline-block"><strong>时间线</strong><br>19:30 医疗室准备药物，托马斯来借镇定剂<br>20:10 被亨利叫到书房再次威胁<br>20:20 爆发争吵摔门而出<br>20:30 花园抽烟冷静<br>20:50 听到巨响赶过去，门已反锁<br>21:00 托马斯破门，发现亨利体内有两种毒药</div>
+<p><strong>任务</strong>：隐藏毒品生意 · 承认下药但强调剂量安全 · 找出真凶</p>
 </div>
 
-<button id="btnEmily" class="btn" onclick="toggleEmily()">📝 记者·艾米莉</button>
-<div id="emilyScript" class="hide secret-script">
-<h3>🔒 记者·艾米莉 · 绝密剧本</h3>
-<p><strong>人设</strong>：28岁，调查记者，实则来复仇。</p>
-<p><strong>秘密</strong>：你是亨利私生女。母亲被抛弃后跳河自尽。</p>
-<div class="timeline-block"><strong>时间线</strong><br>19:00 书房对质<br>19:30 看到托马斯送酒<br>20:25 门外听到争吵<br>20:40 用偷配钥匙进入书房<br>20:45 发现亨利已死</div>
-<p><strong>任务</strong>：隐藏私生女身份 · 隐藏进入过书房 · 找出真凶。</p>
+<button id="bEmily" class="btn" onclick="pick('Emily')">📝 记者·艾米莉</button>
+<div id="sEmily" class="hide secret-script">
+<h3>记者·艾米莉 · 绝密剧本</h3>
+<p><strong>人设</strong>：28岁，调查记者，实则亨利私生女。</p>
+<p><strong>秘密</strong>：你是亨利的<span class="gold">私生女</span>。你的母亲被亨利抛弃后跳河自尽。你收集多年证据来庄园复仇。你确实进入过书房——用偷配的钥匙打开了反锁的门，发现亨利已经倒地。你拿走了书桌上的遗书，然后逃离了现场。</p>
+<div class="timeline-block"><strong>时间线</strong><br>19:00 书房对质，展示母亲信件<br>19:30 离开时看到托马斯端酒进入<br>20:00 回房发现信件被动过<br>20:25 再次前往书房，门外听到争吵<br>20:35 看到伊莎贝拉慌张离开<br>20:45 第三次前往，门已反锁<br>21:00 听到破门声</div>
+<p><strong>任务</strong>：隐藏私生女身份 · 隐藏进入过书房 · 找出真凶</p>
 </div>
 </div>
-<button class="btn btn-gold" onclick="nextStep()">✅ 双方读完，进入公聊</button>
+<button class="btn btn-gold" onclick="go(3)">进入公聊</button>
 </div>
 
-<!-- STEP3 -->
-<div id="step3" class="hide">
-<h2>🗣️ 公聊 · 盘问人机</h2>
+<div id="s3" class="hide">
+<h2>第一阶段 · 公聊分享</h2>
+<div class="box" style="border-left:4px solid #5a3a5a;">
+<p style="color:#a080a0;font-weight:bold;font-size:11px;">他们说过的话</p>
+<div id="shareArea" style="font-size:11px;color:#8a7a8a;">选择角色后显示...</div>
+</div>
 <div class="box">
-<p>系统已整理其他角色的公开故事。输入问题盘问人机角色！</p>
-<p class="tip">💡 问题示例："你19:30在哪里？""你和亨利什么关系？"</p>
-</div>
+<p style="color:#d4a0c8;font-weight:bold;font-size:12px;">盘问NPC</p>
 <div id="chatArea">
-<div class="chat-card">
-<div class="name">🩸 系统</div>
-<div class="content" id="chatContent">选择角色后显示其他角色介绍...</div>
-</div>
+<div class="chat-card"><div class="name">血色庄园</div><div class="content" id="chatContent">选择角色后显示...</div></div>
 </div>
 <div class="question-area">
-<p style="color:#d4a0a0;font-weight:bold;margin-bottom:6px;">💬 盘问人机</p>
 <div class="flex-row">
-<select id="targetSelect"><option value="">选择对象</option></select>
-<input type="text" id="questionInput" placeholder="输入问题..." />
-<button class="btn btn-sm" onclick="askQuestion()">🔍 盘问</button>
+<select id="target"><option value="">选择对象</option></select>
+<input id="question" placeholder="输入问题..." />
+<button class="btn btn-sm" onclick="ask()">询问</button>
 </div>
-<div id="responseBox" class="response-box">💬 选择对象并输入问题...</div>
+<div class="quick-btns">
+<button onclick="qk('托马斯')">管家</button>
+<button onclick="qk('伊莎贝拉')">夫人</button>
+<button onclick="qk('维克多')">医生</button>
+<button onclick="qk('艾米莉')">记者</button>
+<button onclick="qk('红磨坊')">红磨坊</button>
 </div>
-<button class="btn" onclick="nextStep()">🔎 进入搜证</button>
+<div id="resp" class="response-box">选择对象并输入问题...</div>
+</div>
+</div>
+<button class="btn" onclick="go(4)">进入第一轮搜证</button>
 </div>
 
-<!-- STEP4 -->
-<div id="step4" class="hide">
-<h2>🔦 公开线索</h2>
+<div id="s4" class="hide">
+<h2>第一轮搜证 · 公开线索</h2>
 <div class="box">
 <p><strong>死因报告</strong></p>
-<p>1. 体内有 <span class="gold">两种毒物</span>：慢性毒药 + 吗啡</p>
-<p>2. 头部有 <span class="gold">钝器重击伤</span>，凶器是地球仪</p>
-<p>3. 死亡时间：<span class="gold">20:30-20:50</span></p>
-<p style="margin-top:8px;"><strong>现场线索</strong></p>
-<p>4. 书房门反锁，锁芯有 <span class="gold">新刮痕</span></p>
-<p>5. 威士忌杯有 <span class="gold">药物残留</span></p>
-<p>6. 壁炉有 <span class="gold">烧了一半的遗嘱</span></p>
-<p>7. 托马斯手帕有 <span class="gold">血迹</span></p>
-<p>8. 伊莎贝拉房间有 <span class="gold">镇静剂</span></p>
-<p>9. 维克多医疗包有 <span class="gold">吗啡针剂</span></p>
-<p>10. 艾米莉笔记本有 <span class="gold">亨利亲笔信</span></p>
+<p>1. 体内检测出两种毒物：慢性毒药 + 吗啡</p>
+<p>2. 颈部有白绫勒痕，但较浅</p>
+<p>3. 真正死因：<span class="gold">砒霜中毒</span>，白绫是死后伪装</p>
+<p>4. 死亡时间：<span class="gold">20:30-20:50</span></p>
+<p style="margin-top:4px;"><strong>现场线索</strong></p>
+<p>5. 书房门反锁，锁芯有新刮痕</p>
+<p>6. 桌上有桃花酒，杯中有粉末残留</p>
+<p>7. 壁炉里有烧了一半的遗嘱</p>
+<p>8. 窗台有半枚脚印</p>
+<p>9. 画案上有未完成的画像，酷似艾米莉</p>
 </div>
-<button class="btn" onclick="nextStep()">🧩 隐藏线索</button>
+<button class="btn" onclick="go(5)">进入第二轮搜证</button>
 </div>
 
-<!-- STEP5 -->
-<div id="step5" class="hide">
-<h2>⚖️ 隐藏线索</h2>
+<div id="s5" class="hide">
+<h2>第二轮搜证 · 隐藏线索</h2>
 <div class="box">
-<p><strong style="color:#e6d28c;">🔍 盘问触发</strong></p>
-<p>▪ 托马斯 — 盘问"红磨坊"</p>
-<p>▪ 伊莎贝拉 — 盘问"继承人"</p>
-<p>▪ 维克多 — 盘问"毒品"或"敲诈"</p>
-<p>▪ 艾米莉 — 盘问"私生女"或"遗书"</p>
+<p><strong style="color:#e8a0c8;">需要盘问触发的线索</strong></p>
+<p>1. 盘问托马斯「红磨坊」——说出20年前灭门案真相</p>
+<p>2. 盘问伊莎贝拉「继承人」——说出庄园真正继承人身份</p>
+<p>3. 盘问维克多「毒品」或「敲诈」——说出被亨利敲诈的记录</p>
+<p>4. 盘问艾米莉「私生女」或「遗书」——说出身世和遗书内容</p>
+<p>5. 盘问所有人「20:40」——那个时间谁在书房附近</p>
 </div>
 <div class="box">
-<p>🔄 互相提问、对时间线、找破绽。</p>
-<p class="tip">⏱️ 25分钟 · 双重谋杀</p>
+<p><strong style="color:#d4b080;">时间线矛盾</strong></p>
+<p>托马斯说20:30看到艾米莉在走廊徘徊。</p>
+<p>艾米莉说20:45第三次前往书房，门已反锁。</p>
+<p>但20:40有人用钥匙打开了书房门。</p>
+<p>谁在说谎？</p>
 </div>
-<button class="btn" onclick="nextStep()">🗳️ 最终投票</button>
-</div>
-
-<!-- STEP6 -->
-<div id="step6" class="hide">
-<h2>🗳️ 最终投票</h2>
-<div class="box" style="text-align:center;">
-<p>投票选出 <span class="red">下毒者</span> 和 <span class="red">钝器凶手</span></p>
-<p class="red" style="font-size:20px;margin:10px 0;">⚡ 可能是一人或两人！</p>
-<div style="display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:10px 0;">
-<span class="badge">🎩 托马斯</span>
-<span class="badge">👗 伊莎贝拉</span>
-<span class="badge">🩺 维克多</span>
-<span class="badge">📝 艾米莉</span>
-</div>
-</div>
-<button class="btn btn-gold" onclick="nextStep()">📖 公布真相</button>
+<button class="btn" onclick="go(6)">进入动机分析</button>
 </div>
 
-<!-- STEP7 -->
-<div id="step7" class="hide">
-<h2>⚡ 真相复盘</h2>
-<div class="box" style="border-left:4px solid #8a3a3a;">
-<p><span class="green" style="font-size:20px;">🔴 真相反转</span></p>
-<p style="margin-top:8px;"><strong style="color:#e8d0d0;">💊 下毒者：管家·托马斯</strong></p>
-<p>托马斯下了慢性毒药，但剂量不足致命。</p>
-<p style="margin-top:6px;"><strong style="color:#e8d0d0;">🔪 钝器凶手：记者·艾米莉</strong></p>
-<p>艾米莉用偷配钥匙进入书房，愤怒中重击亨利头部。</p>
-<p style="margin-top:6px;"><strong style="color:#e8d0d0;">🔄 真正反转</strong></p>
-<p>亨利倒下前手里握着真遗书："艾米莉，所有财产留给你。"</p>
-<p>艾米莉拿走的"遗书"是<span class="red">假的</span>，是托马斯故意放的。</p>
-<p><span class="red">托马斯策划了整个局，借刀杀人。</span></p>
+<div id="s6" class="hide">
+<h2>动机分析 · 每个人都在保护谁</h2>
+<div class="box">
+<p><strong style="color:#e8a0c8;">托马斯</strong> — 为了20年前的灭门之仇。他下了毒，但剂量不足。</p>
+<p><strong style="color:#e8a0c8;">伊莎贝拉</strong> — 为了母亲和家族荣誉。她拿走了遗嘱，但没杀人。</p>
+<p><strong style="color:#e8a0c8;">维克多</strong> — 为了摆脱敲诈。他下了吗啡，但剂量安全。</p>
+<p><strong style="color:#e8a0c8;">艾米莉</strong> — 为了母亲的死。她进入过书房，但否认杀人。</p>
+</div>
+<div class="box">
+<p style="font-size:11px;color:#8a7a9a;">提示：有人下了毒，有人下了吗啡，有人用白绫伪装，有人用重击致命。</p>
+<p style="font-size:11px;color:#8a7a9a;">谁才是真正的"最后一击"？</p>
+</div>
+<button class="btn" onclick="go(7)">第二轮盘问</button>
+</div>
+
+<div id="s7" class="hide">
+<h2>第二轮盘问 · 深层挖掘</h2>
+<div class="box">
+<p style="color:#d4a0c8;font-weight:bold;font-size:12px;">深层盘问</p>
+<div id="chatArea2">
+<div class="chat-card"><div class="name">血色庄园</div><div class="content" id="chatContent2">选择角色后显示...</div></div>
+</div>
+<div class="question-area">
+<div class="flex-row">
+<select id="target2"><option value="">选择对象</option></select>
+<input id="question2" placeholder="输入问题..." />
+<button class="btn btn-sm" onclick="ask2()">询问</button>
+</div>
+<div class="quick-btns">
+<button onclick="qk2('你是谁')">你是谁</button>
+<button onclick="qk2('砒霜')">砒霜</button>
+<button onclick="qk2('遗嘱')">遗嘱</button>
+<button onclick="qk2('白绫')">白绫</button>
+<button onclick="qk2('20:40')">20:40</button>
+</div>
+<div id="resp2" class="response-box">选择对象并输入问题...</div>
+</div>
+</div>
+<button class="btn" onclick="go(8)">最终投票</button>
+</div>
+
+<div id="s8" class="hide">
+<h2>最终投票</h2>
+<div class="box" style="text-align:center;"><p>谁是真凶？</p></div>
+<div class="vote-status" id="vs"><span class="voter">玩家1</span> 未投 | <span class="voter">玩家2</span> 未投</div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:4px;">
+<button class="btn btn-vote" id="v1A" onclick="vt(1,'A')">管家·托马斯</button>
+<button class="btn btn-vote" id="v2A" onclick="vt(2,'A')">管家·托马斯</button>
+<button class="btn btn-vote" id="v1B" onclick="vt(1,'B')">夫人·伊莎贝拉</button>
+<button class="btn btn-vote" id="v2B" onclick="vt(2,'B')">夫人·伊莎贝拉</button>
+<button class="btn btn-vote" id="v1C" onclick="vt(1,'C')">医生·维克多</button>
+<button class="btn btn-vote" id="v2C" onclick="vt(2,'C')">医生·维克多</button>
+<button class="btn btn-vote" id="v1D" onclick="vt(1,'D')">记者·艾米莉</button>
+<button class="btn btn-vote" id="v2D" onclick="vt(2,'D')">记者·艾米莉</button>
+</div>
+<div id="vr" style="display:none;text-align:center;padding:4px;background:#0a0a12;border-radius:8px;margin:3px 0;font-size:12px;"><span id="vtxt"></span></div>
+<button class="btn btn-gold" id="rb" onclick="showTruth()" style="display:none;">揭晓真相</button>
+</div>
+
+<div id="s9" class="hide">
+<h2>真相</h2>
+<div class="box" style="border-left:4px solid #8a4a7a;">
+<p><span class="green" style="font-size:16px;">真相反转</span></p>
+<p><strong>下毒者：托马斯</strong>（慢性毒药，剂量不足）</p>
+<p><strong>伪装有：艾米莉</strong>（白绫伪装自尽）</p>
+<p><strong>真凶：伊莎贝拉</strong></p>
+<p>伊莎贝拉在20:40再次回到书房，看到亨利因药物反应倒地但未死。她看到桌上那份遗嘱——亨利把所有财产都捐给了孤儿院，她什么都没了。她在极度愤怒中，将随身携带的砒霜倒入亨利口中，然后解下白绫伪造了自尽假象。</p>
+<p style="margin-top:4px;"><span class="gold">但真正的反转：</span></p>
+<p>亨利手里握着一张真遗嘱——"所有财产留给伊莎贝拉"。那是被托马斯藏起来的真遗嘱。托马斯故意烧了假遗嘱，诱导伊莎贝拉做出过激行为。</p>
+<p>托马斯不仅下了毒，更是整个局的策划者——借刀杀人。</p>
 </div>
 <div class="box">
 <p><strong>结局</strong></p>
-<p>▪ 托马斯 · 承认下毒，揭露亨利罪行</p>
-<p>▪ 伊莎贝拉 · 清白，继承庄园</p>
-<p>▪ 维克多 · 清白，协助警方获减刑</p>
-<p>▪ 艾米莉 · 钝器凶手，得知真相后坦白</p>
+<p>托马斯 · 在狱中揭露了亨利全部罪行</p>
+<p>伊莎贝拉 · 知道自己被利用后，选择自首</p>
+<p>维克多 · 协助警方破获地下网络，获减刑</p>
+<p>艾米莉 · 写了一本关于母亲的书</p>
 </div>
-<button class="btn" onclick="restartGame()">🔄 重新起航</button>
+<button class="btn" onclick="restart()">重新开始</button>
 </div>
 
-<div class="footer-note">🩸 真相永远藏在细节之中</div>
+<div class="footer-note">血色庄园里，每个人都在保护另一个人。</div>
 </div>
 
 <script>
-var currentStep=0, selectedRole=null;
-var stepIds=["step0","step1","step2","step3","step4","step5","step6","step7"];
+var step=0,role=null;
+var steps=["s0","s1","s2","s3","s4","s5","s6","s7","s8","s9"];
+var votes=[null,null];
+var labels={A:'托马斯',B:'伊莎贝拉',C:'维克多',D:'艾米莉'};
 
-function nextStep(){
-    if(currentStep<stepIds.length-1){
-        document.getElementById(stepIds[currentStep]).classList.add('hide');
-        currentStep++;
-        document.getElementById(stepIds[currentStep]).classList.remove('hide');
-        if(stepIds[currentStep]=='step2') resetButtons();
-        if(stepIds[currentStep]=='step3' && selectedRole) generateChat(selectedRole);
-    }
+var shareStories={
+Thomas:'20年前，我的家族在一夜之间消失了。我改名换姓，潜伏了十五年，就是为了让那个人也体验一下失去一切的滋味。',
+Isabella:'我母亲死的那天，她手里攥着一封信——"你的女儿会回来的。"我回来了，但不是为了继承。',
+Victor:'他敲诈了我七年。七年里我给他免费提供了一切。但我没想到，最后想要他命的，不止我一个人。',
+Emily:'我母亲跳河前说了一句话："你父亲永远不会承认你。"她错了。他写了一封遗书，但我不敢看。'
+};
+var shareLines={
+Thomas:'他给那人倒的酒，是温的。',
+Isabella:'她梳妆台底层有一张照片，照片上的女人和她一模一样。',
+Victor:'他的医疗包里有三支针剂，只有一支是给病人准备的。',
+Emily:'她笔记本里夹着一封信，收件人写着"父亲"。'
+};
+var chatData={
+Thomas:{n:'托马斯',s:'管家，20年前灭门案幸存者。',t:'19:30送酒下毒→20:00见伊莎贝拉→20:15听争吵→20:30见艾米莉→20:45发现尸体→21:00报警'},
+Isabella:{n:'伊莎贝拉',s:'夫人，庄园真正继承人。',t:'19:45争吵→20:00遇托马斯→20:20回房→20:40听倒地声→20:50见艾米莉→21:00破门'},
+Victor:{n:'维克多',s:'医生，被敲诈七年。',t:'19:30备药→20:10被召见→20:20争吵离开→20:30花园→20:50听巨响→21:00破门'},
+Emily:{n:'艾米莉',s:'记者，亨利私生女。',t:'19:00对质→19:30离开见托马斯→20:00回房→20:25再往书房→20:35见伊莎贝拉→20:45门反锁→21:00听破门'}
+};
+var kb={
+Thomas:{'红磨坊':'红磨坊是我家族的庄园。亨利灭我满门夺走了它。','毒药':'我下了毒但剂量不足致死。','20:40':'20:40我在厨房，但没有人能证明。','遗嘱':'我烧了一半的遗嘱，那是我放的。','default':'我潜伏十五年，就是为了今天。'},
+Isabella:{'继承人':'我才是真正继承人。我母亲被亨利逼死。','遗嘱':'我拿走了书房里的遗嘱，上面写着财产归我。','20:40':'20:40我听到重物倒地声，但我在二楼。','砒霜':'砒霜…我不知道谁放的。','default':'我做的一切，都是为了我母亲。'},
+Victor:{'毒品':'亨利敲诈了我七年。','吗啡':'我下了吗啡，但剂量绝对安全。','20:40':'20:40我在花园，有人看到我了。','敲诈':'他每年都威胁我，我受够了。','default':'我只是个医生。'},
+Emily:{'私生女':'我是亨利的私生女。我母亲是被他逼死的。','遗书':'我拿走了那封遗书…上面写着他把财产都捐了。','20:40':'20:40我用钥匙进了书房…他已经倒地了。','白绫':'白绫不是我挂的。','default':'我想让他身败名裂，但他先死了。'}
+};
+    var kb2={
+Thomas:{'你是谁':'我是托马斯·德·拉·克鲁瓦。那个名字在20年前就死了。','红磨坊':'红磨坊——我家族的庄园。亨利灭门那晚，我躲在酒窖里听了一整夜的脚步声。','砒霜':'砒霜不是我放的。我下的是慢性毒药，只会让他慢慢生病。','遗嘱':'我烧了遗嘱，因为我知道那会变成杀人的引子。','20:40':'20:40我端着醒酒茶上楼，在楼梯口看到伊莎贝拉从书房方向走来。','default':'十五年了，我没睡过一个安稳觉。'},
+Isabella:{'你是谁':'我是伊莎贝拉·布莱克。不，应该是伊莎贝拉·德·拉·克鲁瓦。','红磨坊':'我母亲是红磨坊家族的女佣。她活了下来，但她什么都没告诉我。','砒霜':'砒霜…是我从维克多的医疗包里拿的。我只是想让他尝尝我母亲尝过的滋味。','遗嘱':'我拿到了真正的遗嘱——他留给我了。但太晚了。','20:40':'20:40…我进了书房。他还没死。他在看着我。我…我把砒霜倒进了他的嘴里。','default':'我恨了他十年。恨到连自己是谁都忘了。'},
+Victor:{'你是谁':'我是维克多·哈里斯。一个被逼到绝路的医生。','红磨坊':'红磨坊的事我知道一些。亨利当年为了那座庄园，杀了不少人。','砒霜':'砒霜是我医疗包里少的那一瓶…我猜是伊莎贝拉拿走的。','遗嘱':'遗嘱的事我不知情。但我看到托马斯从书房出来时，手里拿着打火机。','20:40':'20:40我在花园，但我看到二楼书房的灯熄了又亮。','default':'我做医生是为了救人。但我救不了自己。'},
+Emily:{'你是谁':'我是艾米莉。亨利的女儿。他最后一个知道这件事的人。','红磨坊':'我母亲是红磨坊家族的后人。她嫁给亨利后才发现真相。','砒霜':'砒霜…我闻到过那个味道。在书房的酒杯里。','遗嘱':'我拿走了那封假遗嘱——上面写着"全部捐给孤儿院"。但那天晚上我发现，亨利还写了另一封。','20:40':'20:40我用钥匙开了门，他已经倒在地上了。我拿走了遗嘱，然后跑了。','default':'我来这里是为了让他认我。但最后，我连他的尸体都不敢看。'}
+};
+
+function go(n){
+    document.getElementById(steps[step]).classList.add('hide');
+    step=n;
+    document.getElementById(steps[n]).classList.remove('hide');
+    if(n==3 && role){ genChat(); genShare(); }
+    if(n==7 && role){ genChat2(); }
+    if(n==8) resetVotes();
+    var pct=Math.round((n/(steps.length-1))*100);
+    document.getElementById('progress').style.width=pct+'%';
+    window.scrollTo({top:0});
 }
 
-function restartGame(){
-    currentStep=0; selectedRole=null;
-    stepIds.forEach(function(id){document.getElementById(id).classList.add('hide');});
-    document.getElementById('step0').classList.remove('hide');
-    resetButtons();
+function restart(){
+    step=0; role=null; votes=[null,null];
+    for(var i=0;i<steps.length;i++){document.getElementById(steps[i]).classList.add('hide');}
+    document.getElementById('s0').classList.remove('hide');
+    resetBtns();
+    document.getElementById('progress').style.width='0%';
+    window.scrollTo({top:0});
 }
 
-var btnThomas=document.getElementById('btnThomas');
-var btnIsabella=document.getElementById('btnIsabella');
-var btnVictor=document.getElementById('btnVictor');
-var btnEmily=document.getElementById('btnEmily');
-var allButtons=[btnThomas,btnIsabella,btnVictor,btnEmily];
-
-var tScript=document.getElementById('thomasScript');
-var iScript=document.getElementById('isabellaScript');
-var vScript=document.getElementById('victorScript');
-var eScript=document.getElementById('emilyScript');
-var allScripts=[tScript,iScript,vScript,eScript];
-
-function resetButtons(){
-    for(var i=0;i<allButtons.length;i++){allButtons[i].disabled=false;}
-    for(var j=0;j<allScripts.length;j++){allScripts[j].classList.add('hide');}
-    selectedRole=null;
-}
-
-function disableOthers(except){
-    for(var i=0;i<allButtons.length;i++){if(allButtons[i]!=except)allButtons[i].disabled=true;}
-}
-
-function toggleScript(script,btn,key){
-    if(!script.classList.contains('hide')){
-        script.classList.add('hide');
-        resetButtons();
+function pick(key){
+    var map={Thomas:['bThomas','sThomas'],Isabella:['bIsabella','sIsabella'],Victor:['bVictor','sVictor'],Emily:['bEmily','sEmily']};
+    var b=document.getElementById(map[key][0]);
+    var s=document.getElementById(map[key][1]);
+    if(!s.classList.contains('hide')){
+        s.classList.add('hide');
+        resetBtns();
         return;
     }
-    for(var i=0;i<allScripts.length;i++){allScripts[i].classList.add('hide');}
-    script.classList.remove('hide');
-    disableOthers(btn);
-    btn.disabled=false;
-    selectedRole=key;
+    for(var k in map){document.getElementById(map[k][1]).classList.add('hide');}
+    s.classList.remove('hide');
+    role=key;
+    var ids=['bThomas','bIsabella','bVictor','bEmily'];
+    for(var i=0;i<ids.length;i++){
+        var b2=document.getElementById(ids[i]);
+        b2.disabled=(b2.id!=b.id);
+    }
+    b.disabled=false;
 }
 
-function toggleThomas(){toggleScript(tScript,btnThomas,'thomas');}
-function toggleIsabella(){toggleScript(iScript,btnIsabella,'isabella');}
-function toggleVictor(){toggleScript(vScript,btnVictor,'victor');}
-function toggleEmily(){toggleScript(eScript,btnEmily,'emily');}
+function resetBtns(){
+    var ids=['bThomas','bIsabella','bVictor','bEmily'];
+    for(var i=0;i<ids.length;i++){document.getElementById(ids[i]).disabled=false;}
+    var keys=['Thomas','Isabella','Victor','Emily'];
+    for(var k=0;k<keys.length;k++){document.getElementById('s'+keys[k]).classList.add('hide');}
+    role=null;
+}
 
-var roleNames={thomas:'管家·托马斯',isabella:'夫人·伊莎贝拉',victor:'医生·维克多',emily:'记者·艾米莉'};
-
-var chatData={
-thomas:{name:'🎩 管家·托马斯',story:'在庄园15年，表面忠诚。与20年前灭门案有关。',timeline:'19:30送酒→20:00见伊莎贝拉→20:15听争吵→20:30见艾米莉→20:45发现尸体'},
-isabella:{name:'👗 夫人·伊莎贝拉',story:'亨利遗孀，优雅冷静。传言是庄园真正继承人。',timeline:'19:45争吵→20:00遇托马斯→20:20回房→20:40听倒地声→21:00破门'},
-victor:{name:'🩺 医生·维克多',story:'亨利私人医生，眼神阴郁。与亨利关系复杂。',timeline:'19:30备药→20:10被召见→20:20争吵离开→20:50听巨响→21:00验尸'},
-emily:{name:'📝 记者·艾米莉',story:'调查记者，与亨利有私人恩怨。',timeline:'19:00对质→19:30见托马斯→20:25听争吵→20:40进书房→21:00听破门'}
-};
-
-var kb={
-thomas:{'红磨坊':'红磨坊是我家族的庄园。亨利灭我满门夺走它。','毒药':'我下了毒但剂量不足以致命。','default':'我暂时不能回答。'},
-isabella:{'继承人':'我才是真正继承人。母亲被亨利逼死。','default':'我理解你的怀疑，但我没杀他。'},
-victor:{'毒品':'亨利敲诈我7年。我下了吗啡但剂量安全。','敲诈':'他每年都威胁我提供免费药物。','default':'我只是个医生。'},
-emily:{'私生女':'我是亨利私生女。母亲被他逼死。','遗书':'那封遗书写着财产全捐孤儿院…','default':'我真的不知道。'}
-};
-
-function generateChat(key){
-    var html='', keys=Object.keys(chatData), has=false;
+function genShare(){
+    var area=document.getElementById('shareArea');
+    var html='';
+    var keys=Object.keys(shareStories);
     for(var i=0;i<keys.length;i++){
-        if(keys[i]!=key){
-            has=true; var d=chatData[keys[i]];
-            html+='<div class="chat-card"><div class="name">'+d.name+'</div><div class="content">'+d.story+'</div><div class="timeline-mini"><strong>时间线：</strong>'+d.timeline+'</div></div>';
+        if(keys[i]!=role){
+            html+='<div class="share-card"><div class="sname">'+chatData[keys[i]].n+'</div><div class="sstory">'+shareStories[keys[i]]+'</div><div class="sline">'+shareLines[keys[i]]+'</div></div>';
         }
     }
-    document.getElementById('chatContent').innerHTML=has?html:'<p style="color:#6a8aaa;">无其他角色</p>';
-    var sel=document.getElementById('targetSelect');
+    area.innerHTML=html||'<span style="color:#6a5a6a;">无其他角色</span>';
+}
+
+function genChat(){
+    var html='';
+    var keys=Object.keys(chatData);
+    var has=false;
+    for(var i=0;i<keys.length;i++){
+        if(keys[i]!=role){
+            has=true;
+            var d=chatData[keys[i]];
+            html+='<div class="chat-card"><div class="name">'+d.n+'</div><div class="content">'+d.s+'</div><div class="timeline-mini">'+d.t+'</div></div>';
+        }
+    }
+    document.getElementById('chatContent').innerHTML=has?html:'<p style="color:#6a8a6a;">无其他角色</p>';
+    var sel=document.getElementById('target');
     sel.innerHTML='<option value="">选择对象</option>';
     for(var j=0;j<keys.length;j++){
-        if(keys[j]!=key){
+        if(keys[j]!=role){
             var opt=document.createElement('option');
-            opt.value=keys[j]; opt.textContent=roleNames[keys[j]];
+            opt.value=keys[j];
+            opt.textContent=chatData[keys[j]].n;
             sel.appendChild(opt);
         }
     }
 }
 
-function askQuestion(){
-    var target=document.getElementById('targetSelect').value;
-    var q=document.getElementById('questionInput').value.trim();
-    var box=document.getElementById('responseBox');
-    if(!target){box.innerHTML='⚠️ 请选择对象！';return;}
-    if(!q){box.innerHTML='⚠️ 请输入问题！';return;}
-    var data=kb[target];
-    var ans=data['default']||'我不太清楚…';
-    for(var key in data){ if(q.indexOf(key)!=-1){ ans=data[key]; break; } }
-    box.innerHTML='💬 <strong style="color:#d4a0a0;">'+roleNames[target]+'</strong> 回答：'+ans;
+function genChat2(){
+    var html='';
+    var keys=Object.keys(chatData);
+    var has=false;
+    for(var i=0;i<keys.length;i++){
+        if(keys[i]!=role){
+            has=true;
+            var d=chatData[keys[i]];
+            html+='<div class="chat-card"><div class="name">'+d.n+'</div><div class="content">'+d.s+'</div><div class="timeline-mini">'+d.t+'</div></div>';
+        }
+    }
+    document.getElementById('chatContent2').innerHTML=has?html:'<p style="color:#6a8a6a;">无其他角色</p>';
+    var sel=document.getElementById('target2');
+    sel.innerHTML='<option value="">选择对象</option>';
+    for(var j=0;j<keys.length;j++){
+        if(keys[j]!=role){
+            var opt=document.createElement('option');
+            opt.value=keys[j];
+            opt.textContent=chatData[keys[j]].n;
+            sel.appendChild(opt);
+        }
+    }
 }
 
-resetButtons();
+function ask(){
+    var target=document.getElementById('target').value;
+    var q=document.getElementById('question').value.trim();
+    var box=document.getElementById('resp');
+    if(!target){box.innerHTML='请选择对象！';return;}
+    if(!q){box.innerHTML='请输入问题！';return;}
+    var data=kb[target];
+    var ans=data['default']||'我不太清楚…';
+    for(var key in data){
+        if(q.indexOf(key)!=-1){ans=data[key];break;}
+    }
+    box.innerHTML='<strong style="color:#d4a0c8;">'+chatData[target].n+'</strong> 回答：'+ans;
+}
+
+function ask2(){
+    var target=document.getElementById('target2').value;
+    var q=document.getElementById('question2').value.trim();
+    var box=document.getElementById('resp2');
+    if(!target){box.innerHTML='请选择对象！';return;}
+    if(!q){box.innerHTML='请输入问题！';return;}
+    var data=kb2[target];
+    var ans=data['default']||'我不太清楚…';
+    for(var key in data){
+        if(q.indexOf(key)!=-1){ans=data[key];break;}
+    }
+    box.innerHTML='<strong style="color:#d4a0c8;">'+chatData[target].n+'</strong> 回答：'+ans;
+}
+
+function qk(w){document.getElementById('question').value=w; ask();}
+function qk2(w){document.getElementById('question2').value=w; ask2();}
+
+function vt(p,c){
+    if(votes[p-1]!==null)return;
+    votes[p-1]=c;
+    var id='v'+p+c;
+    document.getElementById(id).classList.add('selected');
+    var all=document.querySelectorAll('#s8 .btn-vote');
+    for(var i=0;i<all.length;i++){
+        if(all[i].id!==id && all[i].id.startsWith('v'+p)){
+            all[i].disabled=true;
+        }
+    }
+    updateVote();
+    if(votes[0]!==null && votes[1]!==null){
+        document.getElementById('rb').style.display='block';
+        document.getElementById('vtxt').innerHTML='玩家1 投 <span style="color:#d4a0c8;">'+labels[votes[0]]+'</span> ｜ 玩家2 投 <span style="color:#d4a0c8;">'+labels[votes[1]]+'</span>';
+        document.getElementById('vr').style.display='block';
+    }
+}
+
+function updateVote(){
+    var s=document.getElementById('vs');
+    var p1=votes[0]?labels[votes[0]]:'未投';
+    var p2=votes[1]?labels[votes[1]]:'未投';
+    s.innerHTML='<span class="voter">玩家1</span> '+p1+' | <span class="voter">玩家2</span> '+p2;
+}
+
+function resetVotes(){
+    votes=[null,null];
+    var all=document.querySelectorAll('#s8 .btn-vote');
+    for(var i=0;i<all.length;i++){all[i].disabled=false;all[i].classList.remove('selected');}
+    document.getElementById('rb').style.display='none';
+    document.getElementById('vr').style.display='none';
+    updateVote();
+}
+
+function showTruth(){
+    document.getElementById('s8').classList.add('hide');
+    step=9;
+    document.getElementById('s9').classList.remove('hide');
+    window.scrollTo({top:0});
+}
+
+resetBtns();
 </script>
 </body>
 </html>
