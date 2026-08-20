@@ -28,7 +28,7 @@ h2{color:#d4a0c8;margin:8px 0 4px;border-left:4px solid #8a4a7a;padding-left:10p
 .tip{color:#8a7a9a;font-size:10px;background:#0a0a12;padding:2px 8px;border-radius:20px;display:inline-block;border:1px solid #1a1a2a;}
 .badge-group{display:flex;flex-wrap:wrap;gap:3px 6px;justify-content:center;margin:2px 0;}
 .badge{background:#0a0a12;padding:2px 8px;border-radius:20px;font-size:9px;border:1px solid #2a2a3a;color:#8a7a9a;}
-.secret-script{background:#0a0a12;border-left:4px solid #8a4a7a;padding:8px 10px;margin:4px 0;border-radius:10px;border:1px solid #1a1a2a;max-height:350px;overflow-y:auto;}
+.secret-script{background:#0a0a12;border-left:4px solid #8a4a7a;padding:8px 10px;margin:4px 0;border-radius:10px;border:1px solid #1a1a2a;max-height:400px;overflow-y:auto;}
 .secret-script h3{color:#d4a0c8;border-bottom:1px dashed #2a1a2a;padding-bottom:3px;margin-bottom:3px;font-size:13px;}
 .secret-script p{color:#b8a8c0;line-height:1.5;margin:2px 0;font-size:11px;}
 .secret-script strong{color:#e0c8e0;}
@@ -64,14 +64,14 @@ h2{color:#d4a0c8;margin:8px 0 4px;border-left:4px solid #8a4a7a;padding-left:10p
 </head>
 <body>
 <div class="container" id="app">
-<h1>🩸 血色·庄园</h1>
+<h1>血色庄园</h1>
 <div class="progress-bar"><div class="fill" id="progress"></div></div>
 
 <div id="s0">
 <div class="box" style="text-align:center;">
-<div class="badge-group"><span class="badge">2人</span><span class="badge">120-150分钟</span></div>
-<div class="poem">庄园里的每个人，都在说谎。</div>
-<p style="font-size:12px;">1930年，血色庄园。富商亨利·布莱克死于书房。<br>死因：<span class="red">毒酒 + 白绫</span>。<br>双重致死，凶手不止一人。</p>
+<div class="badge-group"><span class="badge">2人</span><span class="badge">140-180分钟</span></div>
+<div class="poem">庄园里的每个人，都在说谎。<br>每个人都在保护另一个人。</div>
+<p style="font-size:12px;">1930年，血色庄园。富商亨利·布莱克死于书房。<br>死因：<span class="red">毒酒 + 白绫</span>。<br>四名嫌疑人，四段隐秘的爱恨，一个被埋藏了二十五年的秘密。</p>
 <p class="tip">角色互斥 · 禁止窥屏</p>
 </div>
 <button class="btn" onclick="go(1)">踏入庄园</button>
@@ -80,11 +80,9 @@ h2{color:#d4a0c8;margin:8px 0 4px;border-left:4px solid #8a4a7a;padding-left:10p
 <div id="s1" class="hide">
 <h2>故事背景</h2>
 <div class="box">
-<p>托马斯 — 管家，20年前灭门案唯一幸存者</p>
-<p>伊莎贝拉 — 夫人，庄园真正继承人</p>
-<p>维克多 — 医生，被死者敲诈多年</p>
-<p>艾米莉 — 记者，死者私生女</p>
-<p style="margin-top:4px;font-size:11px;color:#6a5a6a;">每个人都有杀人的理由。</p>
+<p>1930年，血色庄园。富商亨利·布莱克在书房中死亡，死因成谜。</p>
+<p style="margin-top:4px;font-size:11px;color:#6a5a6a;">四名嫌疑人，四段隐秘的爱恨，一个被埋藏了二十五年的秘密。</p>
+<p style="font-size:11px;color:#6a5a6a;">每个人都在保护另一个人。每个人都在说谎。</p>
 </div>
 <button class="btn" onclick="go(2)">选择角色</button>
 </div>
@@ -95,38 +93,38 @@ h2{color:#d4a0c8;margin:8px 0 4px;border-left:4px solid #8a4a7a;padding-left:10p
 <div class="role-grid">
 <button id="bThomas" class="btn" onclick="pick('Thomas')">托马斯</button>
 <div id="sThomas" class="hide secret-script">
-<h3>托马斯 · 绝密剧本</h3>
-<p><strong>人设</strong>：50岁，管家。</p>
-<p><strong>秘密</strong>：你是20年前"红磨坊家族灭门案"唯一幸存者。你在酒里下了慢性毒药，但剂量不足以致命。</p>
-<div class="timeline-block"><strong>时间线</strong><br>19:30 送酒下毒<br>20:00 见伊莎贝拉<br>20:15 听争吵<br>20:45 发现尸体</div>
-<p><strong>任务</strong>：隐藏灭门案身份 · 找出真凶</p>
+<h3>托马斯</h3>
+<p><strong>人设</strong>：52岁，管家。在布莱克庄园服务了二十五年。</p>
+<p>你是20年前红磨坊家族灭门案唯一幸存者，你的家族一夜之间消失了。但你留在庄园不只是为了复仇——你是在寻找一个人的下落。二十五年前，你妹妹失踪了，你怀疑她被亨利藏了起来。你暗恋伊莎贝拉十五年，从她嫁进庄园的第一天起。你从未说出口，只是在她深夜独自流泪时，在她门口放一杯温牛奶。</p>
+<p>你有一个秘密：二十五年前你妹妹失踪前，曾对你说过一句话——"他爱的是另一个人。"</p>
+<div class="timeline-block"><strong>时间线</strong><br>19:30 送威士忌<br>20:00 看到伊莎贝拉从书房出来<br>20:15 听到书房争吵声（维克多）<br>20:30 在走廊遇到艾米莉，她哭过<br>20:45 再次进入书房，亨利已死</div>
 </div>
 
 <button id="bIsabella" class="btn" onclick="pick('Isabella')">伊莎贝拉</button>
 <div id="sIsabella" class="hide secret-script">
-<h3>伊莎贝拉 · 绝密剧本</h3>
-<p><strong>人设</strong>：35岁，夫人。</p>
-<p><strong>秘密</strong>：你与亨利是假结婚，你是庄园真正继承人。你拿走了书房里的遗嘱。</p>
-<div class="timeline-block"><strong>时间线</strong><br>19:45 争吵<br>20:00 遇托马斯<br>20:40 听倒地声<br>21:00 破门</div>
-<p><strong>任务</strong>：隐藏真实身份 · 找出真凶</p>
+<h3>伊莎贝拉</h3>
+<p><strong>人设</strong>：34岁，亨利的遗孀。</p>
+<p>你嫁进庄园三年，表面是续弦，实际上是回来复仇的——你的母亲是亨利的第一任妻子，被亨利逼死。但三年的婚姻生活让你发现，亨利不是你想的那样。他会在深夜独自对着一个女人的照片哭泣，会在每年十月消失三天。你不知道那个女人是谁，但你开始怀疑，你恨的那个亨利，和真实的亨利，是不是同一个人。</p>
+<p>你还有一个秘密：你三年前嫁给亨利，是因为你爱着另一个人——托马斯。从你第一眼看到他，你就爱上了这个沉默的管家。你嫁进庄园后，每天在走廊里擦肩而过，却不能说一个字。</p>
+<div class="timeline-block"><strong>时间线</strong><br>19:45 与亨利在书房争吵——他发现你在调查他<br>20:00 愤怒离开，在走廊遇到托马斯<br>20:40 听到楼下传来重物倒地声<br>20:50 看到艾米莉匆忙从书房方向离开<br>21:00 托马斯破门</div>
 </div>
 
 <button id="bVictor" class="btn" onclick="pick('Victor')">维克多</button>
 <div id="sVictor" class="hide secret-script">
-<h3>维克多 · 绝密剧本</h3>
-<p><strong>人设</strong>：45岁，医生。</p>
-<p><strong>秘密</strong>：被亨利敲诈了7年，你在酒里下了吗啡，但剂量安全。</p>
-<div class="timeline-block"><strong>时间线</strong><br>19:30 备药<br>20:10 被召见<br>20:20 争吵离开<br>21:00 破门</div>
-<p><strong>任务</strong>：隐藏毒品生意 · 找出真凶</p>
+<h3>维克多</h3>
+<p><strong>人设</strong>：46岁，亨利私人医生。</p>
+<p>你是地下毒品贩子，被亨利敲诈了七年。但你留在亨利身边，是因为你在他身上看到了自己——一个被过去困住的人。你有一个已经死了十年的女儿，她叫艾米莉。是的，和那个记者同名。你第一次看到艾米莉时，你几乎以为她回来了。你一直在暗中保护她，就像你没能保护自己的女儿一样。</p>
+<p>你还有一个秘密：亨利的敲诈记录里，藏着一条关于"二十五年前失踪的女人"的线索。那个女人——是亨利的初恋，也是你曾经爱过的人。</p>
+<div class="timeline-block"><strong>时间线</strong><br>19:30 在医疗室准备药物<br>20:10 被亨利叫到书房<br>20:20 争吵后摔门而出<br>20:30 在花园遇到艾米莉，她问你"你是谁"<br>20:50 听到书房传来巨响</div>
 </div>
 
 <button id="bEmily" class="btn" onclick="pick('Emily')">艾米莉</button>
 <div id="sEmily" class="hide secret-script">
-<h3>艾米莉 · 绝密剧本</h3>
-<p><strong>人设</strong>：28岁，记者。</p>
-<p><strong>秘密</strong>：你是亨利私生女。你用钥匙进了书房，发现亨利倒地，拿走了遗书。</p>
-<div class="timeline-block"><strong>时间线</strong><br>19:00 对质<br>19:30 见托马斯<br>20:40 进书房<br>21:00 听破门</div>
-<p><strong>任务</strong>：隐藏私生女身份 · 找出真凶</p>
+<h3>艾米莉</h3>
+<p><strong>人设</strong>：28岁，调查记者。亨利的私生女。</p>
+<p>你来到庄园，是为了调查母亲的死。你的母亲在十五年前跳河自尽，留给你的最后一句话是："去找托马斯。"你一直在找的托马斯，就是庄园的管家。你怀疑他是你的父亲，但你不敢问。你整理母亲遗物时发现了一封信，信上写着："托马斯，不要告诉她。"</p>
+<p>你还有一个秘密：你来庄园还有一个目的——找到你母亲留下的东西。她说过，有一件东西藏在庄园里，"证明她从来不是被抛弃的那个人"。</p>
+<div class="timeline-block"><strong>时间线</strong><br>19:00 在书房与亨利对质——他认出了你<br>19:30 离开时看到托马斯端酒进入书房<br>20:25 再次前往书房，在门外听到争吵<br>20:35 看到伊莎贝拉匆匆走来<br>20:40 用偷配的钥匙打开书房门，亨利已经倒地</div>
 </div>
 </div>
 <button class="btn btn-gold" onclick="go(3)">进入公聊</button>
@@ -154,12 +152,13 @@ h2{color:#d4a0c8;margin:8px 0 4px;border-left:4px solid #8a4a7a;padding-left:10p
 <button onclick="qk('伊莎贝拉')">伊莎贝拉</button>
 <button onclick="qk('维克多')">维克多</button>
 <button onclick="qk('艾米莉')">艾米莉</button>
+<button onclick="qk('二十五年前')">二十五年前</button>
 <button onclick="qk('红磨坊')">红磨坊</button>
 </div>
 <div id="resp" class="response-box">选择对象并输入问题...</div>
 </div>
 </div>
-<button class="btn" onclick="go(4)">搜证</button>
+<button class="btn" onclick="go(4)">第一轮搜证</button>
 </div>
 
 <div id="s4" class="hide">
@@ -171,8 +170,9 @@ h2{color:#d4a0c8;margin:8px 0 4px;border-left:4px solid #8a4a7a;padding-left:10p
 <p>3. 死亡时间：<span class="gold">20:30-20:50</span></p>
 <p style="margin-top:4px;"><strong>现场线索</strong></p>
 <p>4. 书房门反锁，锁芯有新刮痕</p>
-<p>5. 桃花酒杯中有粉末残留</p>
+<p>5. 酒杯中有粉末残留</p>
 <p>6. 壁炉里有烧了一半的遗嘱</p>
+<p>7. 书桌上有一张女人的旧照片——照片背面写着"1910"</p>
 </div>
 <button class="btn" onclick="go(5)">第二轮搜证</button>
 </div>
@@ -180,22 +180,28 @@ h2{color:#d4a0c8;margin:8px 0 4px;border-left:4px solid #8a4a7a;padding-left:10p
 <div id="s5" class="hide">
 <h2>第二轮搜证 · 隐藏线索</h2>
 <div class="box">
-<p><strong style="color:#e8a0c8;">需要盘问触发</strong></p>
-<p>1. 盘问托马斯「红磨坊」</p>
-<p>2. 盘问伊莎贝拉「继承人」</p>
-<p>3. 盘问维克多「毒品」或「敲诈」</p>
-<p>4. 盘问艾米莉「私生女」或「遗书」</p>
+<p><strong style="color:#e8a0c8;">需要盘问触发的线索</strong></p>
+<p>1. 盘问托马斯「红磨坊」——说出二十年前的灭门案</p>
+<p>2. 盘问托马斯「二十五年前」——说出妹妹失踪的事</p>
+<p>3. 盘问伊莎贝拉「亨利」——说出她发现的亨利秘密</p>
+<p>4. 盘问维克多「女儿」——说出他死去的女儿</p>
+<p>5. 盘问艾米莉「母亲」——说出母亲留给她的遗言</p>
+<p>6. 盘问所有人「照片」——1910年的那个女人是谁</p>
 </div>
 <button class="btn" onclick="go(6)">动机分析</button>
 </div>
 
 <div id="s6" class="hide">
-<h2>动机分析</h2>
+<h2>动机分析 · 每个人都在保护谁</h2>
 <div class="box">
-<p><strong style="color:#e8a0c8;">托马斯</strong> — 为了20年前的灭门之仇</p>
-<p><strong style="color:#e8a0c8;">伊莎贝拉</strong> — 为了母亲和家族荣誉</p>
-<p><strong style="color:#e8a0c8;">维克多</strong> — 为了摆脱敲诈</p>
-<p><strong style="color:#e8a0c8;">艾米莉</strong> — 为了母亲的死</p>
+<p><strong style="color:#e8a0c8;">托马斯</strong> — 他爱伊莎贝拉，他在找妹妹，他想知道二十五年前的真相</p>
+<p><strong style="color:#e8a0c8;">伊莎贝拉</strong> — 她恨亨利，但她不确定自己恨的是不是真的亨利</p>
+<p><strong style="color:#e8a0c8;">维克多</strong> — 他想保护艾米莉，他想弥补对女儿的亏欠</p>
+<p><strong style="color:#e8a0c8;">艾米莉</strong> — 她想找到母亲留下的东西，想知道她是谁</p>
+</div>
+<div class="box">
+<p style="font-size:11px;color:#8a7a9a;">提示：二十五年前，有一个女人同时被这三个人爱过。</p>
+<p style="font-size:11px;color:#8a7a9a;">她是亨利的初恋、托马斯失踪的妹妹、维克多曾经爱过的人。</p>
 </div>
 <button class="btn" onclick="go(7)">第二轮盘问</button>
 </div>
@@ -215,8 +221,9 @@ h2{color:#d4a0c8;margin:8px 0 4px;border-left:4px solid #8a4a7a;padding-left:10p
 </div>
 <div class="quick-btns">
 <button onclick="qk2('你是谁')">你是谁</button>
-<button onclick="qk2('砒霜')">砒霜</button>
-<button onclick="qk2('遗嘱')">遗嘱</button>
+<button onclick="qk2('二十五年前')">二十五年前</button>
+<button onclick="qk2('照片')">照片</button>
+<button onclick="qk2('爱情')">爱情</button>
 </div>
 <div id="resp2" class="response-box">选择对象并输入问题...</div>
 </div>
@@ -247,16 +254,22 @@ h2{color:#d4a0c8;margin:8px 0 4px;border-left:4px solid #8a4a7a;padding-left:10p
 <div class="box" style="border-left:4px solid #8a4a7a;">
 <p><span class="green" style="font-size:16px;">真相反转</span></p>
 <p><strong>真凶：伊莎贝拉</strong></p>
-<p>伊莎贝拉在20:40回到书房，看到亨利因药物反应倒地但未死。她将砒霜倒入他口中，后用白绫伪造自尽。</p>
-<p>但真正的反转：亨利手里握着一张真遗嘱——"所有财产留给伊莎贝拉"。那是被托马斯藏起来的。托马斯烧了假遗嘱，诱导伊莎贝拉杀人。</p>
-<p>托马斯不仅下了毒，更是借刀杀人的策划者。</p>
+<p>伊莎贝拉在20:40回到书房，看到亨利因药物反应倒地但未死。她将砒霜倒入他口中，然后用白绫伪造了自尽的假象。</p>
+<p style="margin-top:4px;"><strong style="color:#e8a0c8;">💔 情感真相</strong></p>
+<p>但真正的反转不在凶手身上——而在二十五年前。</p>
+<p>那张照片上的女人，是托马斯的妹妹、亨利的初恋、维克多曾经爱过的人。她叫林月。</p>
+<p>二十五年前，林月怀孕了。孩子是亨利的。但亨利已经和伊莎贝拉的母亲订婚了，他不敢承认。林月把孩子交给了别人抚养，然后消失了。</p>
+<p>那个孩子——是艾米莉的母亲。也就是说，艾米莉是亨利的孙女。</p>
+<p>艾米莉的母亲沈知秋，一生都在替林月守着这个秘密。她跳河前说的"去找托马斯"，是告诉艾米莉——托马斯是林月的哥哥，是她的舅公。</p>
+<p>亨利这二十五年来一直在找林月。每年十月消失的那三天，他就是去了林月最后出现的地方。他书房里那张照片，他看了二十五年。</p>
+<p>伊莎贝拉把砒霜喂进亨利嘴里的时候，亨利手里攥着一张纸条，上面写着："林月在城南。"那是他刚刚找到的线索。</p>
 </div>
 <div class="box">
 <p><strong>结局</strong></p>
-<p>托马斯 · 在狱中揭露了亨利全部罪行</p>
-<p>伊莎贝拉 · 自首</p>
-<p>维克多 · 协助警方获减刑</p>
-<p>艾米莉 · 写了一本关于母亲的书</p>
+<p>托马斯 · 终于知道了妹妹的下落。他在城南找到了林月的墓，墓碑上刻着"她爱的人，一直在等她。"</p>
+<p>伊莎贝拉 · 自首。她在法庭上说："我恨了他三年，但我不知道我恨的只是一个影子。"</p>
+<p>维克多 · 继续做他的医生。他开始在城南开了一家免费的诊所，用他女儿的名字命名的。</p>
+<p>艾米莉 · 写了一本书。书名是《三个女人》，写她的母亲、她的外婆、和那位从未见过面的女子。</p>
 </div>
 <button class="btn" onclick="restart()">重新开始</button>
 </div>
@@ -271,38 +284,40 @@ var votes=[null,null];
 var labels={A:'托马斯',B:'伊莎贝拉',C:'维克多',D:'艾米莉'};
 
 var shareStories={
-Thomas:'20年前我的家族一夜之间消失了。我潜伏了十五年。',
-Isabella:'我母亲死的那天手里攥着一封信——"你的女儿会回来的。"',
-Victor:'他敲诈了我七年。七年里我给他免费提供了一切。',
-Emily:'我母亲跳河前说了一句话："你父亲永远不会承认你。"'
+Thomas:'我在这座庄园里守了二十五年。我失去了我的家族，我的妹妹，我的一切。唯一让我留下来的，是一个从未说出口的名字。',
+Isabella:'我嫁给他是因为恨他。但三年之后，我分不清我恨的是他，还是我记忆里的那个影子。',
+Victor:'我女儿死的时候，她刚刚二十三岁。和那个记者一样的年纪。我看到她的第一眼，我就想——她回来了。',
+Emily:'我母亲跳河前说的最后一句话是："去找托马斯。"我用了十五年才找到这里。'
 };
 var shareLines={
-Thomas:'他给那人倒的酒是温的。',
-Isabella:'她梳妆台底层有一张照片，照片上的女人和她一模一样。',
-Victor:'他的医疗包里有三支针剂，只有一支是给病人准备的。',
-Emily:'她笔记本里夹着一封信，收件人写着"父亲"。'
+Thomas:'他每晚都会在伊莎贝拉的门口放一杯温牛奶，然后悄悄离开。',
+Isabella:'她不知道的是，亨利每年消失的那三天，是去同一个地方——城南。',
+Victor:'他抽屉里有一张照片，照片上的小女孩和他女儿一模一样。',
+Emily:'她母亲的日记本里夹着一片干枯的枫叶，日期是二十五年前。'
 };
 var chatData={
-Thomas:{n:'托马斯',s:'管家，20年前灭门案幸存者。',t:'19:30送酒→20:00见伊莎贝拉→20:15听争吵→20:45发现尸体→21:00报警'},
-Isabella:{n:'伊莎贝拉',s:'夫人，庄园真正继承人。',t:'19:45争吵→20:00遇托马斯→20:40听倒地声→21:00破门'},
-Victor:{n:'维克多',s:'医生，被敲诈七年。',t:'19:30备药→20:10被召见→20:20争吵离开→20:30花园→20:50听巨响→21:00破门'},
-Emily:{n:'艾米莉',s:'记者，亨利私生女。',t:'19:00对质→19:30见托马斯→20:40进书房→21:00听破门'}
+Thomas:{n:'托马斯',s:'管家，二十五年守候。',t:'19:30送酒 20:00见伊莎贝拉 20:15听争吵 20:30遇艾米莉 20:45发现尸体'},
+Isabella:{n:'伊莎贝拉',s:'夫人，三年爱恨交缠。',t:'19:45争吵 20:00遇托马斯 20:40听倒地声 20:50见艾米莉 21:00破门'},
+Victor:{n:'维克多',s:'医生，十年愧疚。',t:'19:30备药 20:10被召见 20:20争吵离开 20:30遇艾米莉 20:50听巨响'},
+Emily:{n:'艾米莉',s:'记者，十五年寻找。',t:'19:00对质 19:30见托马斯 20:25门外听争吵 20:35见伊莎贝拉 20:40进书房'}
 };
 var kb={
-Thomas:{'红磨坊':'红磨坊是我家族的庄园。亨利灭我满门。','毒药':'我下了毒但剂量不足致命。','default':'我潜伏十五年，就是为了今天。'},
-Isabella:{'继承人':'我才是真正继承人。我母亲被亨利逼死。','遗嘱':'我拿走了书房里的遗嘱。','default':'我做的一切都是为了我母亲。'},
-Victor:{'毒品':'亨利敲诈了我七年。','吗啡':'我下了吗啡，但剂量绝对安全。','default':'我只是个医生。'},
-Emily:{'私生女':'我是亨利的私生女。','遗书':'我拿走了那封遗书。','default':'我想让他身败名裂，但他先死了。'}
+Thomas:{'红磨坊':'红磨坊是我家族的庄园。亨利灭我满门。','二十五年前':'二十五年前我妹妹失踪了。我怀疑亨利把她藏起来了。','照片':'那张照片…是我妹妹。','亨利':'他每年的十月份都会消失三天。我一直不知道他去了哪里。','default':'我守了二十五年，就是为了一个答案。'},
+Isabella:{'亨利':'我恨他。但我不知道我恨的是他，还是我母亲描述的影子。','照片':'那张照片…我看到过。亨利每年十月都会拿出来看。','二十五年前':'二十五年前亨利做了什么事…我母亲死前说过一句话。','default':'我爱上了一个不该爱的人。'},
+Victor:{'女儿':'我女儿死了十年了。如果我当时在她身边…','照片':'那个女人…二十五年前我认识她。她是亨利的初恋。','亨利':'他敲诈了我七年。但我一直没走。因为我发现，他在保护一个人。','default':'我救不了自己的女儿，但我还能救别人的。'},
+Emily:{'母亲':'我母亲跳河前说"去找托马斯"。我用了十五年才找到他。','照片':'那张照片…不是我母亲。但她们长得很像。','二十五年前':'二十五年前有人离开了我母亲的世界。我母亲一辈子都在找她。','default':'我想知道我是谁。'}
 };
 var kb2={
-Thomas:{'你是谁':'我是托马斯·德·拉·克鲁瓦。','红磨坊':'红磨坊是我家族的庄园。','砒霜':'砒霜不是我放的。','遗嘱':'我烧了遗嘱，因为我知道那会变成杀人的引子。','default':'十五年了，我没睡过一个安稳觉。'},
-Isabella:{'你是谁':'我是伊莎贝拉·布莱克。','砒霜':'砒霜是我从维克多的医疗包里拿的。','遗嘱':'我拿到了真正的遗嘱。','20:40':'20:40我进了书房。他还没死。我把砒霜倒进了他的嘴里。','default':'我恨了他十年。'},
-Victor:{'你是谁':'我是维克多·哈里斯。','砒霜':'砒霜是我医疗包里少的那一瓶。','遗嘱':'我看到托马斯从书房出来时手里拿着打火机。','20:40':'20:40我在花园，但我看到二楼书房的灯熄了又亮。','default':'我做医生是为了救人。但我救不了自己。'},
-Emily:{'你是谁':'我是艾米莉。亨利的女儿。','砒霜':'砒霜…我闻到过那个味道。','遗嘱':'我拿走了假遗嘱。但那天晚上我发现亨利还写了另一封。','20:40':'20:40我用钥匙开了门，他已经倒在地上了。','default':'我来这里是为了让他认我。'}
+Thomas:{'你是谁':'我是托马斯·德·拉·克鲁瓦。我妹妹叫林月。','二十五年前':'二十五年前我妹妹失踪了。我找到她的最后一条线索——她在城南。','照片':'那张照片是我拍的。1910年，她二十三岁。','爱情':'我爱伊莎贝拉十五年。她不知道。','default':'我一直在等一个答案。'},
+Isabella:{'你是谁':'我是伊莎贝拉·布莱克。一个爱错人又恨错人的人。','二十五年前':'二十五年前亨利爱上了一个女人。那个女人不是我的母亲。','照片':'他每年十月都会看那张照片。那个女人，他还爱着她。','爱情':'我以为我恨亨利。但我恨的是他爱了别人。','default':'我杀了人，但我不知道我杀的是谁。'},
+Victor:{'你是谁':'我是维克多。一个活在自己愧疚里的医生。','二十五年前':'二十五年前我认识林月。我们都爱过她。','照片':'那张照片是我拍的。我拍了她一生最好看的一张照片。','爱情':'我爱过林月。我女儿爱过亨利。','default':'我用十年时间学会活下去。'},
+Emily:{'你是谁':'我是艾米莉。我是林月的孙女。','二十五年前':'二十五年前我的外婆消失了。我母亲一生都在找她。','照片':'那张照片是我外婆。她长得和我一模一样。','爱情':'我母亲爱过一个不该爱的人。她把他藏在心里十五年。','default':'我终于知道自己是谁了。'}
 };
+
 function go(n){
-    document.getElementById(steps[step]).classList.add('hide');
-    step=n;
+    for(var i=0;i<steps.length;i++){
+        document.getElementById(steps[i]).classList.add('hide');
+    }
     document.getElementById(steps[n]).classList.remove('hide');
     if(n==3 && role){ genChat(); genShare(); }
     if(n==7 && role){ genChat2(); }
@@ -311,6 +326,7 @@ function go(n){
     document.getElementById('progress').style.width=pct+'%';
     window.scrollTo({top:0});
 }
+
 function restart(){
     step=0; role=null; votes=[null,null];
     for(var i=0;i<steps.length;i++){document.getElementById(steps[i]).classList.add('hide');}
@@ -319,6 +335,7 @@ function restart(){
     document.getElementById('progress').style.width='0%';
     window.scrollTo({top:0});
 }
+
 function pick(key){
     var map={Thomas:['bThomas','sThomas'],Isabella:['bIsabella','sIsabella'],Victor:['bVictor','sVictor'],Emily:['bEmily','sEmily']};
     var b=document.getElementById(map[key][0]);
@@ -338,6 +355,7 @@ function pick(key){
     }
     b.disabled=false;
 }
+
 function resetBtns(){
     var ids=['bThomas','bIsabella','bVictor','bEmily'];
     for(var i=0;i<ids.length;i++){document.getElementById(ids[i]).disabled=false;}
@@ -345,6 +363,7 @@ function resetBtns(){
     for(var k=0;k<keys.length;k++){document.getElementById('s'+keys[k]).classList.add('hide');}
     role=null;
 }
+
 function genShare(){
     var area=document.getElementById('shareArea');
     var html='';
@@ -356,6 +375,7 @@ function genShare(){
     }
     area.innerHTML=html||'<span style="color:#6a5a6a;">无其他角色</span>';
 }
+
 function genChat(){
     var html='';
     var keys=Object.keys(chatData);
@@ -379,6 +399,7 @@ function genChat(){
         }
     }
 }
+
 function genChat2(){
     var html='';
     var keys=Object.keys(chatData);
@@ -402,6 +423,7 @@ function genChat2(){
         }
     }
 }
+
 function ask(){
     var target=document.getElementById('target').value;
     var q=document.getElementById('question').value.trim();
@@ -415,6 +437,7 @@ function ask(){
     }
     box.innerHTML='<strong style="color:#d4a0c8;">'+chatData[target].n+'</strong> 回答：'+ans;
 }
+
 function ask2(){
     var target=document.getElementById('target2').value;
     var q=document.getElementById('question2').value.trim();
@@ -428,8 +451,10 @@ function ask2(){
     }
     box.innerHTML='<strong style="color:#d4a0c8;">'+chatData[target].n+'</strong> 回答：'+ans;
 }
+
 function qk(w){document.getElementById('question').value=w; ask();}
 function qk2(w){document.getElementById('question2').value=w; ask2();}
+
 function vt(p,c){
     if(votes[p-1]!==null)return;
     votes[p-1]=c;
@@ -448,12 +473,14 @@ function vt(p,c){
         document.getElementById('vr').style.display='block';
     }
 }
+
 function updateVote(){
     var s=document.getElementById('vs');
     var p1=votes[0]?labels[votes[0]]:'未投';
     var p2=votes[1]?labels[votes[1]]:'未投';
     s.innerHTML='<span class="voter">玩家1</span> '+p1+' | <span class="voter">玩家2</span> '+p2;
 }
+
 function resetVotes(){
     votes=[null,null];
     var all=document.querySelectorAll('#s8 .btn-vote');
@@ -462,12 +489,23 @@ function resetVotes(){
     document.getElementById('vr').style.display='none';
     updateVote();
 }
+
 function showTruth(){
     document.getElementById('s8').classList.add('hide');
     step=9;
     document.getElementById('s9').classList.remove('hide');
     window.scrollTo({top:0});
 }
+
+window.onload=function(){
+    for(var i=0;i<steps.length;i++){
+        document.getElementById(steps[i]).classList.add('hide');
+    }
+    document.getElementById('s0').classList.remove('hide');
+    resetBtns();
+    document.getElementById('progress').style.width='0%';
+};
+
 resetBtns();
 </script>
 </body>
